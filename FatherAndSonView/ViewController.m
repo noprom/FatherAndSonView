@@ -34,6 +34,11 @@
 //    }
     
     // 父控件
-    self.txt1.superview.backgroundColor = [UIColor yellowColor];
+//    self.txt1.superview.backgroundColor = [UIColor yellowColor];
+    
+    // 根据tag来获得控件
+    
+    UITextField *txt = (UITextField *)[self.view viewWithTag:1000];
+    txt.text = @"测试而已啦";
 }
 @end
