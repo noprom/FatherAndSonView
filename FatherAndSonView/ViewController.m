@@ -9,6 +9,8 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+- (IBAction)show;
+@property (weak, nonatomic) IBOutlet UITextField *txt1;
 
 @end
 
@@ -24,4 +26,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)show {
+    // 获取当前控制器下面的所有子控件
+//    // subviews 表示子控件
+//    for (UIView *view in self.view.subviews) {
+//        view.backgroundColor = [UIColor redColor];
+//    }
+    
+    // 父控件
+    self.txt1.superview.backgroundColor = [UIColor yellowColor];
+}
 @end
